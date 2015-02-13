@@ -1,0 +1,23 @@
+<html ng-app="startApp">
+	<head>
+		<title>StartApp</title>
+	</head>
+	<body>
+		<div ng-controller="userController">
+			<h1>There are {{users.length}} users logged in!</h1>
+			<ul>
+				<li ng-repeat="user in users">
+					{{user.name}}
+				</li>
+			</ul>
+			<form ng-submit="createUser()">
+				<input type="text" placeholder="Name" ng-model="username">
+				<button type="submit">Add!</button> 
+			</form>
+		</div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-resource.js"></script>
+		<script type="text/javascript" src="/scripts/app.js"></script>
+		<script type="text/javascript" src='/scripts/controllers/userController.js'></script>
+	</body>
+</html>
